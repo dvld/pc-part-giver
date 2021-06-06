@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
 import './App.css';
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import PreLaunch from './pages/PreLaunch';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route exact path='/' component={PreLaunch} />
+      </Switch>
+    </>
   );
 }
 
